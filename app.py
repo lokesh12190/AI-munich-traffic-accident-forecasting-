@@ -1,5 +1,4 @@
-# Create app.py for deployment
-app_code = '''from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 import pandas as pd
@@ -61,9 +60,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-'''
-
-with open('app.py', 'w') as f:
-    f.write(app_code)
-
-print("app.py created successfully!")
