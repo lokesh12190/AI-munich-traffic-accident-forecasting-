@@ -1,14 +1,16 @@
-# Fix requirements.txt
-requirements = '''flask==3.0.0
-joblib==1.3.2
-numpy==1.26.4
-pandas==2.1.4
-scikit-learn==1.3.2
-xgboost==2.0.3
-gunicorn==21.2.0
-'''
-
+# Create clean requirements.txt (no triple quotes!)
 with open('requirements.txt', 'w') as f:
-    f.write(requirements)
+    f.write('flask==3.0.0\n')
+    f.write('joblib==1.3.2\n')
+    f.write('numpy==1.26.4\n')
+    f.write('pandas==2.1.4\n')
+    f.write('scikit-learn==1.3.2\n')
+    f.write('xgboost==2.0.3\n')
+    f.write('gunicorn==21.2.0\n')
 
-print("✅ requirements.txt fixed!")
+print("✅ requirements.txt fixed properly!")
+
+# Verify it's correct
+with open('requirements.txt', 'r') as f:
+    print("\nFile contents:")
+    print(f.read())
